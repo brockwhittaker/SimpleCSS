@@ -5,7 +5,7 @@ function ec ($n) {
 }
 function rc ($c) {
   for ($x = 0; $x < count($c); $x++) {
-    if (!preg_match("/{|}/", $c[$x]) && preg_match("/:/", $c[$x])) {
+    if (!preg_match("/{|}|media/", $c[$x]) && preg_match("/:|@/", $c[$x])) {
       $c[$x] .= ";";
     }
   }

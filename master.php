@@ -8,7 +8,7 @@ function explode_contents ($n) {
 
 function replace_commas ($contents) {
   for ($x = 0; $x < count($contents); $x++) {
-    if (!preg_match("/{|}/", $contents[$x]) && preg_match("/:/", $contents[$x])) {
+    if (!preg_match("/{|}|media/", $contents[$x]) && preg_match("/:|@/", $contents[$x])) {
       $contents[$x] .= ";";
     }
   }
